@@ -1,6 +1,5 @@
-
 /* Importar Google Fonts como variable CSS */
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100..900&family=DM+Sans:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100..900&family=DM+Sans:wght@100..900&display=swap");
 
 @import "tailwindcss";
 
@@ -10,8 +9,8 @@
 
 /* Define las variables de fuente al estilo next/font */
 @theme {
-  --font-primary: 'DM Sans', sans-serif;
-  --font-secondary: 'Barlow', sans-serif;
+  --font-primary: "DM Sans", sans-serif;
+  --font-secondary: "Barlow", sans-serif;
 }
 
 @theme {
@@ -28,15 +27,21 @@
 }
 
 @utility bg-hero {
-  background-image: url('/assets/img/hero/bg.jpg');
+  background-image: url("/assets/img/hero/bg.jpg");
 }
 
-body{
-  @apply font-secondary text-secundary
-}
-
-h1,h2,h3,h4,h5,h6 {
-  @apply font-primary text-primary
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-primary text-primary;
+  }
+  body {
+    @apply font-secondary text-secundary;
+  }
 }
 
 .h1 {
@@ -44,15 +49,15 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .h2 {
-  @apply text-[36px] leading-[1.3] xl:text-[46px] xl:leading-[56px] capitalize font-bold ;
+  @apply text-[36px] leading-[1.3] xl:text-[46px] xl:leading-[56px] capitalize font-bold;
 }
 
 .h3 {
-  @apply font-primary font-bold text-3xl ;
+  @apply font-primary font-bold text-3xl;
 }
 
 .h4 {
-  @apply text-2xl font-semibold ;
+  @apply text-2xl font-semibold;
 }
 
 @theme inline {
@@ -162,11 +167,11 @@ h1,h2,h3,h4,h5,h6 {
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-@layer base {
+/* @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
   }
-}
+} */
