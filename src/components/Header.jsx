@@ -1,4 +1,3 @@
-"use client"
 import { RiArrowRightUpLine } from 'react-icons/ri'
 import { Link as Scrollink } from 'react-scroll'
 import Logo from './Logo'

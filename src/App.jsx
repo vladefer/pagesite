@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react'
+import { BrowserRouter } from "react-router-dom";
+
 
 import Topbar from './components/Topbar'
 import Header from './components/Header'
@@ -33,26 +35,29 @@ function App() {
   console.log(headerActive)
 
   return (
-    <div >
-      <Topbar />
-      {/* static header */}
-      <div className='relative z-10'>
-        <Header />
+    <BrowserRouter>
+
+      <div >
+        <Topbar />
+        {/* static header */}
+        <div className='relative z-10'>
+          <Header />
+        </div>
+        {/* animate header */}
+        <div className={`w-full transition-transform duration-500 fixed top-0 left-0 z-50 ${headerActive ? "translate-y-0" : "-translate-y-full"}`}>
+          <Header />
+        </div>
+        <Hero />
+        <About />
+        <Stats />
+        <Services />
+        <Work />
+        <Testimonials />
+        <Faq />
+        <Contact />
+        <Footer />
       </div>
-      {/* animate header */}
-      <div className={`w-full transition-transform duration-500 fixed top-0 left-0 z-50 ${headerActive ? "translate-y-0" : "-translate-y-full"}`}>
-        <Header />
-      </div>
-      <Hero />
-      <About />
-      <Stats />
-      <Services />
-      <Work />
-      <Testimonials />
-      <Faq />
-      <Contact />
-      <Footer />
-    </div>
+    </BrowserRouter>
 
   )
 }
