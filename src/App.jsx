@@ -56,6 +56,12 @@ function App() {
         <Faq />
         <Contact />
         <Footer />
+
+        {/* temp div */}
+        <div className='h-[1000px] '></div>
+
+
+
       </div>
     </BrowserRouter>
 
