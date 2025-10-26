@@ -3,7 +3,6 @@ import { Link as Scrollink } from 'react-scroll'
 import Logo from './Logo'
 import NavMobile from './NavMobile'
 
-
 const links = [
   {
     id: "home",
